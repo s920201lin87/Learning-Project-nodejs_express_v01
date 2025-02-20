@@ -2,10 +2,11 @@ const express = require('express');
 const bodyParser =require('body-parser') 
 
 const app = express();
+app.use(express.static(__dirname+'/public'));
 //解析JSON 格式的請求體的中間件
 const jsonParser = bodyParser.json()
 
-const urlencodedParser = bodyParser.urlencoded({ extended: false })
+
 
 
 
